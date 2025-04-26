@@ -71,7 +71,7 @@ def train_loop(config, model, noise_scheduler, optimizer, train_dataloader, eval
     writer = SummaryWriter(comment=run_name)
 
     # for loading segs to condition on:
-    eval_dataloader = iter(eval_dataloader)
+    eval_iter = iter(eval_dataloader)
 
     # Now you train the model
     start_epoch = 0
@@ -173,7 +173,7 @@ def train_loop(config, model, noise_scheduler, optimizer, train_dataloader, eval
         if config.model_type == "DDPM":
             if config.segmentation_guided:
                 pipeline = SegGuidedDDPMPipeline(
-                    unet=model.module, scheduler=noise_scheduler, eval_dataloader=eval_dataloader, external_config=config
+                    unet=model.module, scheduler=noise_scheduler, eval_dataloader=eval_iter, external_config=config
                     )
             else:
                 if config.class_conditional:
@@ -183,7 +183,7 @@ def train_loop(config, model, noise_scheduler, optimizer, train_dataloader, eval
         elif config.model_type == "DDIM":
             if config.segmentation_guided:
                 pipeline = SegGuidedDDIMPipeline(
-                    unet=model.module, scheduler=noise_scheduler, eval_dataloader=eval_dataloader, external_config=config
+                    unet=model.module, scheduler=noise_scheduler, eval_dataloader=eval_iter, external_config=config
                     )
             else:
                 if config.class_conditional:
@@ -194,8 +194,13 @@ def train_loop(config, model, noise_scheduler, optimizer, train_dataloader, eval
         model.eval()
 
         if (epoch + 1) % config.save_image_epochs == 0 or epoch == config.num_epochs - 1:
-            if config.segmentation_guided:
-                seg_batch = next(eval_dataloader)
+            if config.segmentation_guided:                
+                try:
+                    seg_batch = next(eval_iter)
+                except StopIteration:
+                    # loader is exhausted → re-create iterator
+                    eval_iter = iter(eval_dataloader)
+                    seg_batch = next(eval_iter)                
                 evaluate(config, epoch, pipeline, seg_batch)
             else:
                 evaluate(config, epoch, pipeline)
