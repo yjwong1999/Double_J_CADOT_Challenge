@@ -2,11 +2,6 @@
 
 #### By [Yi Jie WONG](https://yjwong1999.github.io/) & [Jing Jie TAN](https://jingjietan.com/) et al
 
-This code is part of our solution for [Challenge IEEE ICIP 2025: CADOT Challenge](https://cadot.onrender.com/).
-```
-jF[m"J1e]*N"[qV9
-```
-
 ## Instructions
 Conda environment
 ```bash
