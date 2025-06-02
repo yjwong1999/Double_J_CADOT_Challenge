@@ -58,8 +58,8 @@ class YOLOWeightedDataset(YOLODataset):
 
             # Give a default weight to background class
             if cls.size == 0:
-              weights.append(1)
-              continue
+                weights.append(1)
+                continue
 
             # Take mean of weights
             # You can change this weight aggregation function to aggregate weights differently
@@ -94,7 +94,7 @@ class YOLOWeightedDataset(YOLODataset):
 # Monkey patch method
 build.YOLODataset = YOLOWeightedDataset
 
-def main(model_name, epochs, batch_size, image_size):
+def main(model_name, epochs, batch_size, imgsz):
     # get current working directory (to make sure the code works anywhere in your device)
     cwd = os.getcwd()
 
@@ -112,7 +112,7 @@ def main(model_name, epochs, batch_size, image_size):
         data=yaml_file,
         batch=batch_size,
         epochs=epochs,
-        imgsz=image_size,
+        imgsz=imgsz,
         plots=True,
         flipud=0.5,
         mixup=0.2,
