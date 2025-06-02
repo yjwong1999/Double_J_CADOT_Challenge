@@ -18,6 +18,8 @@ def run_command(command):
 # get current working directory (to make sure the code works anywhere in your device)
 cwd = os.getcwd()
 
+# get parent directory (because we are in scripts direcotry)
+cwd = os.path.dirname(cwd)
 
 
 #---------------------------------------------------------
@@ -32,22 +34,21 @@ if os.path.exists('detect'):
     shutil.rmtree('detect') 
 
 # create directory
-os.makedirs('detect/train/image')
-os.makedirs('detect/train/label')
+os.makedirs(f'{cwd}/detect/train/image')
+os.makedirs(f'{cwd}/detect/train/label')
 
-os.makedirs('detect/val/image')
-os.makedirs('detect/val/label')
+os.makedirs(f'{cwd}/detect/val/image')
+os.makedirs(f'{cwd}/detect/val/label')
 
 # convert from coco-seg format to yolo-seg format
-command = f'python3 coco2yolo/coco2yolo -ann-path "{cwd}/CADOT_Dataset/train/_annotations.coco.json" -img-dir "{cwd}/CADOT_Dataset/train" -task-dir "{cwd}/detect/train/image" -set union'
+command = f'python3 coco2yolo/coco2yolo -ann-path "{cwd}/data/train/_annotations.coco.json" -img-dir "{cwd}/data/train" -task-dir "{cwd}/detect/train/image" -set union'
 run_command(command)
 
-command = f'python3 coco2yolo/coco2yolo -ann-path "{cwd}/CADOT_Dataset/valid/_annotations.coco.json" -img-dir "{cwd}/CADOT_Dataset/valid" -task-dir "{cwd}/detect/val/image" -set union'
+command = f'python3 coco2yolo/coco2yolo -ann-path "{cwd}/data/valid/_annotations.coco.json" -img-dir "{cwd}/data/valid" -task-dir "{cwd}/detect/val/image" -set union'
 run_command(command)
 
 
 # Source and destination directories
-cwd = os.getcwd()
 src_dir = f"{cwd}/detect/train/image"
 dst_dir = f"{cwd}/detect/train/label"
 
@@ -66,7 +67,6 @@ for filename in os.listdir(src_dir):
 
 
 # Source and destination directories
-cwd = os.getcwd()
 src_dir = f"{cwd}/detect/val/image"
 dst_dir = f"{cwd}/detect/val/label"
 
@@ -112,7 +112,7 @@ shutil.copytree(f'{cwd}/detect/val/label', f'{cwd}/mydata/labels/val', dirs_exis
 
 
 # get ready the yaml file for the dataset
-print('Creating the YOLOv8 yaml file for the dataset ...\n')
+print('Creating the YOLO yaml file for the dataset ...\n')
 yaml_config = [
     f"path: {cwd}/mydata",
     "train: images/train",
