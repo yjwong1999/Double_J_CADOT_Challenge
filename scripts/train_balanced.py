@@ -5,6 +5,7 @@ import ultralytics.data.build as build
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
+import os
 
 class YOLOWeightedDataset(YOLODataset):
     def __init__(self, *args, mode="train", **kwargs):
@@ -94,8 +95,14 @@ class YOLOWeightedDataset(YOLODataset):
 build.YOLODataset = YOLOWeightedDataset
 
 def main(model_name, epochs):
+    # get current working directory (to make sure the code works anywhere in your device)
+    cwd = os.getcwd()
+
+    # get parent directory (because we are in scripts direcotry)
+    parent_dir = os.path.dirname(cwd)  
+
     # YAML file for dataset
-    yaml_file = "mydata/data.yaml"
+    yaml_file = f"{parent_dir}/mydata/data.yaml"
 
     # Load model for transfer learning
     model = YOLO(model_name)
