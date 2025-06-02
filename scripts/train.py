@@ -40,13 +40,13 @@ if __name__ == "__main__":
         "--model-name",
         type=str,
         required=True,
-        help="Path to the model or model name (e.g., yolov5xu.pt)"
+        help="Path to the model or model name (e.g., yolo12x.pt)"
     )
     parser.add_argument(
         "--epoch",
         type=int,
         default=300,
-        help="Number of training epochs (default: 300)"
+        help="Number of training epochs (default: 100)"
     )
     parser.add_argument(
         "--imgsz",
