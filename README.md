@@ -51,10 +51,8 @@ After installing all the dependencies, run the following codes:
 python setup_data.py
 
 # train the model
-python train.py --model-name "yolov5x.pt" --epoch 300
-python train.py --model-name "yolo11x.pt" --epoch 300
-python train.py --model-name "yolov8x.pt" --epoch 300
-python train.py --model-name "yolov10x.pt" --epoch 300
-python train.py --model-name "yolo12x.pt" --epoch 300
-python train_cont.py --model-name "yolo12x.pt" --epoch 300
+python train.py --model-name "yolo12x.pt" --epoch 100
+
+# train with balanced sampling
+python train_balanced.py --model-name "yolo12n.pt" --epoch 100
 ```
