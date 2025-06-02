@@ -8,7 +8,7 @@ import shutil
 cwd = os.getcwd()
 
 # get parent directory (because we are in scripts direcotry)
-cwd = os.path.dirname(cwd)
+parent_dir = os.path.dirname(cwd)
 
 
 #---------------------------------------------------
@@ -16,8 +16,8 @@ cwd = os.path.dirname(cwd)
 #---------------------------------------------------
 
 # Define source and destination directories
-source_folder = f"{cwd}/synthetic_data"
-destination_folder = f"{cwd}/mydata/images/train"
+source_folder = f"{parent_dir}/synthetic_data"
+destination_folder = f"{parent_dir}/mydata/images/train"
 
 # Ensure destination folder exists
 os.makedirs(destination_folder, exist_ok=True)
@@ -40,7 +40,7 @@ import os
 import shutil
 
 # Define source folder
-source_folder = f"{cwd}/mydata/labels/train"
+source_folder = f"{parent_dir}/mydata/labels/train"
 
 # Iterate through all files in the folder
 for filename in os.listdir(source_folder):
