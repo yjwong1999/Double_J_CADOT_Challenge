@@ -19,7 +19,7 @@ def run_command(command):
 cwd = os.getcwd()
 
 # get parent directory (because we are in scripts direcotry)
-cwd = os.path.dirname(cwd)
+parent_dir = os.path.dirname(cwd)
 
 
 #---------------------------------------------------------
@@ -34,23 +34,23 @@ if os.path.exists('detect'):
     shutil.rmtree('detect') 
 
 # create directory
-os.makedirs(f'{cwd}/detect/train/image')
-os.makedirs(f'{cwd}/detect/train/label')
+os.makedirs(f'{parent_dir}/detect/train/image')
+os.makedirs(f'{parent_dir}/detect/train/label')
 
-os.makedirs(f'{cwd}/detect/val/image')
-os.makedirs(f'{cwd}/detect/val/label')
+os.makedirs(f'{parent_dir}/detect/val/image')
+os.makedirs(f'{parent_dir}/detect/val/label')
 
 # convert from coco-seg format to yolo-seg format
-command = f'python3 coco2yolo/coco2yolo -ann-path "{cwd}/data/train/_annotations.coco.json" -img-dir "{cwd}/data/train" -task-dir "{cwd}/detect/train/image" -set union'
+command = f'python3 coco2yolo/coco2yolo -ann-path "{parent_dir}/data/train/_annotations.coco.json" -img-dir "{parent_dir}/data/train" -task-dir "{parent_dir}/detect/train/image" -set union'
 run_command(command)
 
-command = f'python3 coco2yolo/coco2yolo -ann-path "{cwd}/data/valid/_annotations.coco.json" -img-dir "{cwd}/data/valid" -task-dir "{cwd}/detect/val/image" -set union'
+command = f'python3 coco2yolo/coco2yolo -ann-path "{parent_dir}/data/valid/_annotations.coco.json" -img-dir "{parent_dir}/data/valid" -task-dir "{parent_dir}/detect/val/image" -set union'
 run_command(command)
 
 
 # Source and destination directories
-src_dir = f"{cwd}/detect/train/image"
-dst_dir = f"{cwd}/detect/train/label"
+src_dir = f"{parent_dir}/detect/train/image"
+dst_dir = f"{parent_dir}/detect/train/label"
 
 # Iterate through files in the source directory
 for filename in os.listdir(src_dir):
@@ -67,8 +67,8 @@ for filename in os.listdir(src_dir):
 
 
 # Source and destination directories
-src_dir = f"{cwd}/detect/val/image"
-dst_dir = f"{cwd}/detect/val/label"
+src_dir = f"{parent_dir}/detect/val/image"
+dst_dir = f"{parent_dir}/detect/val/label"
 
 # Iterate through files in the source directory
 for filename in os.listdir(src_dir):
@@ -92,29 +92,29 @@ print('#------------------------------------------------------------------------
 
 # creating the directory
 print('Creating the "mydata" directory ...\n')
-os.makedirs(f'{cwd}/mydata')
-os.makedirs(f'{cwd}/mydata/images')
-os.makedirs(f'{cwd}/mydata/labels')
+os.makedirs(f'{parent_dir}/mydata')
+os.makedirs(f'{parent_dir}/mydata/images')
+os.makedirs(f'{parent_dir}/mydata/labels')
 
-os.makedirs(f'{cwd}/mydata/images/train')
-os.makedirs(f'{cwd}/mydata/images/val')
-os.makedirs(f'{cwd}/mydata/labels/train')
-os.makedirs(f'{cwd}/mydata/labels/val')
+os.makedirs(f'{parent_dir}/mydata/images/train')
+os.makedirs(f'{parent_dir}/mydata/images/val')
+os.makedirs(f'{parent_dir}/mydata/labels/train')
+os.makedirs(f'{parent_dir}/mydata/labels/val')
 
 
 # copy the content from "detect" directory
 print('Copying the contents from "detect" ...\n')
-shutil.copytree(f'{cwd}/detect/train/image', f'{cwd}/mydata/images/train', dirs_exist_ok=True)
-shutil.copytree(f'{cwd}/detect/val/image', f'{cwd}/mydata/images/val', dirs_exist_ok=True)
+shutil.copytree(f'{parent_dir}/detect/train/image', f'{parent_dir}/mydata/images/train', dirs_exist_ok=True)
+shutil.copytree(f'{parent_dir}/detect/val/image', f'{parent_dir}/mydata/images/val', dirs_exist_ok=True)
 
-shutil.copytree(f'{cwd}/detect/train/label', f'{cwd}/mydata/labels/train', dirs_exist_ok=True)
-shutil.copytree(f'{cwd}/detect/val/label', f'{cwd}/mydata/labels/val', dirs_exist_ok=True)
+shutil.copytree(f'{parent_dir}/detect/train/label', f'{parent_dir}/mydata/labels/train', dirs_exist_ok=True)
+shutil.copytree(f'{parent_dir}/detect/val/label', f'{parent_dir}/mydata/labels/val', dirs_exist_ok=True)
 
 
 # get ready the yaml file for the dataset
 print('Creating the YOLO yaml file for the dataset ...\n')
 yaml_config = [
-    f"path: {cwd}/mydata",
+    f"path: {parent_dir}/mydata",
     "train: images/train",
     "val: images/val",
     "",
@@ -138,7 +138,7 @@ yaml_config = [
 ]
 
 # save annotation as txt file
-yaml_file = f'{cwd}/mydata/data.yaml'
+yaml_file = f'{parent_dir}/mydata/data.yaml'
 with open(yaml_file, 'w') as file:
     for item in yaml_config:
         file.write(item + '\n')
