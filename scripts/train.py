@@ -2,12 +2,12 @@ import argparse
 from ultralytics import YOLO
 import os
 
-def main(model_name, epochs):
+def main(model_name, epochs, imgsz, batch):
     # get current working directory (to make sure the code works anywhere in your device)
     cwd = os.getcwd()
 
-    # get parent directory (because we are in scripts direcotry)
-    parent_dir = os.path.dirname(cwd)  
+    # get parent directory (because we are in scripts directory)
+    parent_dir = os.path.dirname(cwd)
 
     # YAML file for dataset
     yaml_file = f"{parent_dir}/mydata/data.yaml"
@@ -18,9 +18,9 @@ def main(model_name, epochs):
     # Train the model with custom settings
     results = model.train(
         data=yaml_file,
-        batch=16,
+        batch=batch,
         epochs=epochs,
-        imgsz=640,
+        imgsz=imgsz,
         plots=True,
         flipud=0.5,
         mixup=0.2,
@@ -39,15 +39,28 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model-name",
         type=str,
-        help="Path to the model or model name (default: yolov5xu.pt)"
+        required=True,
+        help="Path to the model or model name (e.g., yolov5xu.pt)"
     )
     parser.add_argument(
         "--epoch",
         type=int,
         default=300,
-        help="Number of training epochs (default: 100)"
+        help="Number of training epochs (default: 300)"
+    )
+    parser.add_argument(
+        "--imgsz",
+        type=int,
+        default=640,
+        help="Input image size (default: 640)"
+    )
+    parser.add_argument(
+        "--batch",
+        type=int,
+        default=16,
+        help="Batch size (default: 16)"
     )
     
     args = parser.parse_args()
 
-    main(args.model_name, args.epoch)
+    main(args.model_name, args.epoch, args.imgsz, args.batch)
