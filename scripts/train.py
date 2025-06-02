@@ -1,9 +1,16 @@
 import argparse
 from ultralytics import YOLO
+import os
 
 def main(model_name, epochs):
+    # get current working directory (to make sure the code works anywhere in your device)
+    cwd = os.getcwd()
+
+    # get parent directory (because we are in scripts direcotry)
+    parent_dir = os.path.dirname(cwd)  
+
     # YAML file for dataset
-    yaml_file = "mydata/data.yaml"
+    yaml_file = f"{parent_dir}/mydata/data.yaml"
 
     # Load model for transfer learning
     model = YOLO(model_name)
