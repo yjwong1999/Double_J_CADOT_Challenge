@@ -54,10 +54,10 @@ python setup_data.py
 python setup_synthetic_data.py
 ```
 
-## Training
+## Training Part 1 (without synthetic data)
 ```bash
 # train ResNext101-YOLO12 naively without tricks
-python3 train_balanced.py --model-name "yolo12n.pt" --epoch 100 --batch 16 --imgsz 640
+python3 train_balanced.py --model-name "cfg/yolo12-resnext101-timm.yaml" --epoch 100 --batch 16 --imgsz 640
 
 # train yolo12n using balanced sampling
 python3 train_balanced.py --model-name "yolo12n.pt" --epoch 100 --batch 8 --imgsz 960
@@ -66,7 +66,7 @@ python3 train_balanced.py --model-name "yolo12n.pt" --epoch 100 --batch 8 --imgs
 python3 train_balanced.py --model-name "yolo12s.pt" --epoch 50 --batch 8 --imgsz 960
 
 # train yolo12x using balanced sampling and synthetic data
-python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgsz 640
+python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgsz 960
 
 # train yolo12x with synthetic data only
 python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgsz 640
