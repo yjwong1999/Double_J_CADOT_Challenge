@@ -21,7 +21,7 @@ Basically, we notice that:
 
 ![Dataset Size Scaling](assets/Dataset_Size_Scaling.png)
 
-## Setup Repo
+## Step 1: Setup Repo
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/198dwtjhB3ETFRHRPLWNCi_bAr1g5213i?usp=sharing) 
 
@@ -64,13 +64,13 @@ pip install requests==2.32.3
 pip install click==8.1.7
 ```
 
-## Setup Dataset
+## Step 2: Setup Dataset
 ```bash
 # to convert the CADOT dataset from the default COCO format to YOLO annotation form
 python setup_data.py
 ```
 
-## Training (Hyperparameters discussion)
+## Step 3: Training (Hyperparameters discussion)
 
 ❗Note that due to time constraints, we did not train all possible experiments. Hence, in general, our hyperparameters are chosen based on:
 - If trained via balanced sampling, batch size = 8, image size = 960, epochs = `100 for smallest YOLO12n, 50 for YOLO12s, 30 for YOLO12x`
@@ -103,7 +103,7 @@ python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 16 --img
 python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgsz 960
 ```
 
-## Inference
+## Step 4: Inference
 ```bash
 # Move all 5 models we trained into model directory
 # Otherwise, download our trained models via the following scripts
