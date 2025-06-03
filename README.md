@@ -87,11 +87,11 @@ python3 train_balanced.py --model-name "yolo12s.pt" --epoch 50 --batch 8 --imgsz
 # setup our synthetic dataset
 python setup_synthetic_data.py
 
+# train yolo12x with synthetic data only
+python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 16 --imgsz 640
+
 # train yolo12x using balanced sampling and synthetic data
 python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgsz 960
-
-# train yolo12x with synthetic data only
-python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgsz 640
 ```
 
 ## Inference
