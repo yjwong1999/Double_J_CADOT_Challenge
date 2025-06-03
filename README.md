@@ -21,6 +21,8 @@ Basically, we notice that:
 3. A smaller model can also achieve performance comparable to a larger model through balanced data sampling.
 4. A larger model tends to overfit when using a balanced data sampling strategy, but this can be mitigated by increasing the amount of data (hence, data scaling).
 
+![Dataset Size Scaling](assets/Dataset_Size_Scaling.png)
+
 ## Instructions
 
 ❗Please refer our Colab link to try out our code seamlessly!
