@@ -45,6 +45,15 @@ pip install requests==2.32.3
 pip install click==8.1.7
 ```
 
+## Setup Dataset
+```bash
+# to convert the CADOT dataset from the default COCO format to YOLO annotation form
+python setup_data.py
+
+# setup our synthetic dataset
+python setup_synthetic_data.py
+```
+
 ## Data structure
 Since we use YOLO as our detection model, we have to organize our dataset following the YOLO format. The `setup_data.py` code will automatically take the raw data from CADOT and convert it into YOLO format. The `mydata` directory will store the training data for our YOLO model.
 ```
