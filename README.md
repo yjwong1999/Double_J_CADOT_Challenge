@@ -21,7 +21,7 @@ Basically, we notice that:
 
 ![Dataset Size Scaling](assets/Dataset_Size_Scaling.png)
 
-## Instructions
+## Setup Repo
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/198dwtjhB3ETFRHRPLWNCi_bAr1g5213i?usp=sharing) 
 
