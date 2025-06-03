@@ -72,6 +72,11 @@ python setup_data.py
 ```
 
 ## Step 3 (Shortcut): Download Our Trained Models
+
+🚅 To avoid training all our models which are time-consuming, you can download our trained models using the provided bash script. 
+
+Alternatively, you can manually search our models from [dropbox](https://www.dropbox.com/scl/fo/ftpub1vybquydapvhhfvw/APMPvKHcA-912DWvfR7f0XQ?rlkey=dn9vio38yni2ic3jmw7u2dss9&st=evkv5k0h&dl=0) (in case the .sh file is not working in Windows machine).
+
 ```bash
 bash download_our_model.sh
 ```
