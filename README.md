@@ -91,3 +91,9 @@ python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgs
 # train yolo12x with synthetic data only
 python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgsz 640
 ```
+
+## Inference
+```bash
+# Move all 5 models we trained into model directory
+python3 infer.py --tta all
+```
