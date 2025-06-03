@@ -5,6 +5,9 @@
 #### By [Yi Jie WONG](https://yjwong1999.github.io/) & [Jing Jie TAN](https://jingjietan.com/) et al
 
 ## Instructions
+
+Please refer our Colab link to try out our code seamlessly!
+
 Conda environment
 ```bash
 conda create --name yolo python=3.10.12 -y
