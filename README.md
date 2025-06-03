@@ -39,7 +39,7 @@ pip install git+https://github.com/DoubleY-BEGC2024/ultralytics-timm.git
 # install this to use wighted box fusion
 pip install ensemble-boxes
 
-# Remaining dependencies (for detection and etc)
+# Remaining dependencies
 pip install pycocotools
 pip install requests==2.32.3
 pip install click==8.1.7
