@@ -54,6 +54,24 @@ python setup_data.py
 python setup_synthetic_data.py
 ```
 
+## Training
+```bash
+# train ResNext101-YOLO12 naively without tricks
+python3 train_balanced.py --model-name "yolo12n.pt" --epoch 100 --batch 16 --imgsz 640
+
+# train yolo12n using balanced sampling
+python3 train_balanced.py --model-name "yolo12n.pt" --epoch 100 --batch 8 --imgsz 960
+
+# train yolo12s using balanced sampling
+python3 train_balanced.py --model-name "yolo12s.pt" --epoch 50 --batch 8 --imgsz 960
+
+# train yolo12x using balanced sampling and synthetic data
+python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgsz 640
+
+# train yolo12x with synthetic data only
+python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgsz 640
+```
+
 ## Data structure
 Since we use YOLO as our detection model, we have to organize our dataset following the YOLO format. The `setup_data.py` code will automatically take the raw data from CADOT and convert it into YOLO format. The `mydata` directory will store the training data for our YOLO model.
 ```
@@ -64,17 +82,4 @@ cadot/mydata
 ├── labels
 │   └── train  
 │   └── val   
-```
-
-## Instructions
-After installing all the dependencies, run the following codes:
-```bash
-# setup the dataset into YOLO format
-python setup_data.py
-
-# train the model
-python train.py --model-name "yolo12x.pt" --epoch 100
-
-# train with balanced sampling
-python train_balanced.py --model-name "yolo12n.pt" --epoch 100
 ```
