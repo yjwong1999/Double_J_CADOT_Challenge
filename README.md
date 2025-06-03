@@ -74,15 +74,3 @@ python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgs
 # train yolo12x with synthetic data only
 python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgsz 640
 ```
-
-## Data structure
-Since we use YOLO as our detection model, we have to organize our dataset following the YOLO format. The `setup_data.py` code will automatically take the raw data from CADOT and convert it into YOLO format. The `mydata` directory will store the training data for our YOLO model.
-```
-cadot/mydata
-├── images
-│   └── train  
-│   └── val  
-├── labels
-│   └── train  
-│   └── val   
-```
