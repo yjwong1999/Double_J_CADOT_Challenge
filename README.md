@@ -79,7 +79,7 @@ python setup_data.py
 
 Actually, we should set all image sizes to 960, but we only considered this step at a later stage. Meanwhile, setting a higher image size increases GPU memory requirements, so we have to lower the batch size. As for epochs, we set them all to 100 for training without balanced sampling. If trained with balanced sampling, we found that larger models tend to overfit, so we have to reduce the number of epochs.
 
-## Training Part 1 (without synthetic data)
+### Training Part 1 (without synthetic data)
   
 ```bash
 # train ResNext101-YOLO12 naively without tricks
@@ -92,7 +92,7 @@ python3 train_balanced.py --model-name "yolo12n.pt" --epoch 100 --batch 8 --imgs
 python3 train_balanced.py --model-name "yolo12s.pt" --epoch 50 --batch 8 --imgsz 960
 ```
 
-## Training Part 2 (with synthetic data)
+### Training Part 2 (with synthetic data)
 ```bash
 # setup our synthetic dataset
 python setup_synthetic_data.py
@@ -102,6 +102,51 @@ python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 16 --img
 
 # train yolo12x using balanced sampling and synthetic data
 python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgsz 960
+```
+
+### Move the trained models into `Double_J_CADOT_Challenge/models` directory
+```python
+import os
+import shutil
+
+def copy_file_to_directory_with_rename(source_file, destination_dir):
+    """Copies a file to a destination directory with a renamed filename.
+
+    The new filename format is <model_name>_<train_iteration>.pt
+
+    Args:
+        source_file: The path to the file to be copied.
+        destination_dir: The path to the destination directory.
+    """
+    try:
+        # Extract parts from the source path
+        parts = source_file.split(os.sep)
+        # e.g., ['runs', 'yolo12x', 'train2', 'weights', 'last.pt']
+        if len(parts) < 4:
+            raise ValueError("Unexpected source_file path format.")
+
+        model_name = parts[1]
+        train_iteration = parts[2]
+        new_filename = f"{model_name}_{train_iteration}.pt"
+
+        destination_path = os.path.join(destination_dir, new_filename)
+
+        shutil.copy(source_file, destination_path)
+        print(f"Successfully copied '{source_file}' to '{destination_path}'")
+    except FileNotFoundError:
+        print(f"Error: Source file '{source_file}' not found.")
+    except PermissionError:
+        print(f"Error: Permission denied to copy '{source_file}' to '{destination_dir}'.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Copy and rename all 5 model weights
+copy_file_to_directory_with_rename('runs/yolo12-resnext101-timm/train/weights/last.pt', '../models')
+copy_file_to_directory_with_rename('runs/yolo12n/train/weights/last.pt', '../models')
+copy_file_to_directory_with_rename('runs/yolo12s/train/weights/last.pt', '../models')
+copy_file_to_directory_with_rename('runs/yolo12x/train/weights/last.pt', '../models')
+copy_file_to_directory_with_rename('runs/yolo12x/train2/weights/last.pt', '../models')
+
 ```
 
 ## Step 4: Inference
