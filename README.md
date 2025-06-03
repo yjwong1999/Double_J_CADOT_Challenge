@@ -4,6 +4,14 @@
 
 #### By [Yi Jie WONG](https://yjwong1999.github.io/) & [Jing Jie TAN](https://jingjietan.com/) et al
 
+## TLDR
+Our approach is simple
+
+We proposed a systematic Tri-Axial Scaling to approach Aerial Object Detection via:
+1. Model Size
+2. Dataset Size
+3. Test-Time Inference
+
 ## Instructions
 
 ❗Please refer our Colab link to try out our code seamlessly!
