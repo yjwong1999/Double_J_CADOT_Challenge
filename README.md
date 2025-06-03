@@ -22,7 +22,8 @@ Basically, we notice that:
 <img src="assets/Segmentation_Guided_Diffusion.jpg" alt="Diffusion Augmentation" width="800"> </br>
 ⬆️ Our diffusion augmentation piple that auto converts annotations into segmentation masks, and convert to image. </br>
 This figure is adopted from my proposed method from another competition. </br>
-A more up to date figure will be updated here soon!
+A more up to date figure will be updated here soon! </br>
+To avoid overcomplicating this repo, we separate the code for diffusion augmentation in a separate [repo](https://github.com/yjwong1999/LOTR).
 
 <img src="assets/Dataset_Size_Scaling.png" alt="Dataset Size Scaling" width="800"> </br>
 ⬆️ Scaling Model Size vs Scaling Data Size vs Scaling Test-Time Inference
