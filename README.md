@@ -154,3 +154,7 @@ python3 infer.py --tta all
 ## Acknowlegment
 
 We would like to express our gratitude to the CADOT organizers for hosting this exciting challenge!
+
+## Citate our Work
+
+[Report Coming Soon!]
