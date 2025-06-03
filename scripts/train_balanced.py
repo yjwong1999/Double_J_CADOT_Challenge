@@ -123,7 +123,7 @@ def main(model_name, epochs, batch_size, imgsz):
         lr0=0.01,
         lrf=0.7,
         val=False,   
-        project=f"runs/{model_name[:-3]}",             
+        project=f"runs/{os.path.splitext(os.path.basename(model_name))[0]}",           
     )
 
 if __name__ == "__main__":
