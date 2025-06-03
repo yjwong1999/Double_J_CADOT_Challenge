@@ -150,3 +150,7 @@ python3 infer.py --tta all
 - However, the `performance discrepancies` between the two models trained on `different platforms` were noticeable.
 - Hence, you might not be able to reproduce the exact same results.
 - Nevertheless, we believe our results on `tri-axial scaling` are valuable to the community 🤗
+
+## Acknowlegment
+
+We would like to express our gratitude to the CADOT organizers for hosting this exciting challenge!
