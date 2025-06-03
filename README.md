@@ -1,7 +1,5 @@
 # IEEE ICIP 2025: CADOT Challenge
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/198dwtjhB3ETFRHRPLWNCi_bAr1g5213i?usp=sharing)
-
 #### By [Yi Jie WONG](https://yjwong1999.github.io/) & [Jing Jie TAN](https://jingjietan.com/) et al
 
 ## TLDR
@@ -25,7 +23,9 @@ Basically, we notice that:
 
 ## Instructions
 
-❗Please refer our Colab link to try out our code seamlessly!
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/198dwtjhB3ETFRHRPLWNCi_bAr1g5213i?usp=sharing) 
+
+👆 Please refer our Colab link to try out our code seamlessly!
 
 Conda environment
 ```bash
