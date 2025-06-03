@@ -2,13 +2,6 @@
 
 #### By [Yi Jie WONG](https://yjwong1999.github.io/) & [Jing Jie TAN](https://jingjietan.com/) et al
 
-### 📋 Table of content
- 1. [Step 1: Setup Repo]
- 2. [Step 2: Setup Dataset]
- 3. [Step 3 (shortcut): Download Our Trained Models]
- 4. [Step 3: Training]
- 5. [Step 4: Inference]
-
 ## TLDR
 🤩 Our approach is simple, scale everything! We proposed a systematic `Tri-Axial Scaling` to approach Aerial Object Detection via:
 1. Model Size
@@ -28,6 +21,15 @@ Basically, we notice that:
 
 ![Dataset Size Scaling](assets/Dataset_Size_Scaling.png) </br>
 ⬆️ Scaling Model Size vs Scaling Data Size vs Scaling Test-Time Inference
+
+
+### 📋 Table of content
+ 1. [Step 1: Setup Repo]
+ 2. [Step 2: Setup Dataset]
+ 3. [Step 3 (shortcut): Download Our Trained Models]
+ 4. [Step 3: Training]
+ 5. [Step 4: Inference]
+
 
 ## Step 1: Setup Repo
 
