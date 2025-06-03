@@ -24,7 +24,7 @@ Basically, we notice that:
 
 
 ### 📋 Table of content
- 1. [Step 1: Setup Repo](https://github.com/yjwong1999/Double_J_CADOT_Challenge/blob/master/README.md#step-1-setup-repo)
+ 1. [Step 1: Setup Repo](#step-1-setup-repo)
  2. [Step 2: Setup Dataset]
  3. [Step 3 (shortcut): Download Our Trained Models]
  4. [Step 3: Training]
