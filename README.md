@@ -10,9 +10,14 @@
 2. Dataset Size & Quality
 3. Test-Time Inference
 
+Basically, we achieve this `Tri-Axial Scaling` by:
+1. Scaling model size
+2. Scaling dataset size, or using balanced sampling
+3. Test-Time Inference = Test-Time Augmentation + Ensemble Models
+
 Basically, we notice that:
 1. A larger model can learn more effectively from a noisy and imbalanced dataset compared to a smaller model.
-2. A larger model benefits more from dataset scaling.
+2. A larger model benefits more from dataset size scaling.
 3. A smaller model can also achieve performance comparable to a larger model through balanced data sampling.
 4. A larger model tends to overfit when using a balanced data sampling strategy, but this can be mitigated by increasing the amount of data (hence, data scaling).
 
