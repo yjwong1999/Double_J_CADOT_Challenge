@@ -27,6 +27,9 @@ A more up to date figure will be updated here soon!
 <img src="assets/Dataset_Size_Scaling.png" alt="Dataset Size Scaling" width="800"> </br>
 ⬆️ Scaling Model Size vs Scaling Data Size vs Scaling Test-Time Inference
 
+[TODO](www.github.com) </br>
+⬆️ Scaling Model Size vs Scaling Data Quality vs Sacling Test-Time Inference
+
 
 ### 📋 Table of content
  1. [Step 1: Setup Repo](#step-1-setup-repo)
