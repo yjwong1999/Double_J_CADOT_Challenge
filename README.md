@@ -95,5 +95,9 @@ python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgs
 ## Inference
 ```bash
 # Move all 5 models we trained into model directory
+# Otherwise, download our trained models via the following scripts
+bash download_our_model.sh
+
+# Run the inference code
 python3 infer.py --tta all
 ```
