@@ -71,7 +71,14 @@ pip install click==8.1.7
 python setup_data.py
 ```
 
+## Step 3 (Shortcut): Download Our Trained Models
+```bash
+bash download_our_model.sh
+```
+
 ## Step 3: Training (Hyperparameters discussion)
+
+⚠️ If you had downloaded our trained models from previous steps, please skip this step. Else you will have repeated models.
 
 ❗Note that due to time constraints, we did not train all possible experiments. Hence, in general, our hyperparameters are chosen based on:
 - If trained via balanced sampling, batch size = 8, image size = 960, epochs = `100 for smallest YOLO12n, 50 for YOLO12s, 30 for YOLO12x`
@@ -111,10 +118,6 @@ python3 move_models.py
 
 ## Step 4: Inference
 ```bash
-# Move all 5 models we trained into model directory
-# Otherwise, download our trained models via the following scripts
-bash download_our_model.sh
-
 # Run the inference code
 python3 infer.py --tta all
 ```
