@@ -73,8 +73,8 @@ python setup_data.py
 ## Training Part 1 (without synthetic data)
 
 ❗Note that due to time constraints, we did not train all possible experiments. Hence, in general, our hyperparameters are chosen based on:
-- If trained via balanced sampling, batch size = 8, image size = 960
-- If trained without balanced sampling, batch size = 16, image size = 640
+- If trained via balanced sampling, batch size = 8, image size = 960, epochs = `100 for smallest YOLO12n, 50 for YOLO12s, 30 for YOLO12x`
+- If trained without balanced sampling, batch size = 16, image size = 640, epochs = 100
   
 ```bash
 # train ResNext101-YOLO12 naively without tricks
