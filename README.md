@@ -17,8 +17,8 @@ conda activate yolo
 Clone this repo
 ```bash
 # clone this repo
-git clone https://github.com/jingjie00/cadot.git
-cd cadot
+git clone https://github.com/yjwong1999/Double_J_CADOT_Challenge.git
+cd Double_J_CADOT_Challenge
 ```
 
 Install dependencies
