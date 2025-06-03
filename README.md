@@ -106,7 +106,7 @@ python3 train_balanced.py --model-name "yolo12s.pt" --epoch 50 --batch 8 --imgsz
 
 ### Training Part 2 (with synthetic data)
 ```bash
-# setup our synthetic dataset
+# setup our synthetic dataset (generated via diffusion augmentation)
 python setup_synthetic_data.py
 
 # train yolo12x with synthetic data only
