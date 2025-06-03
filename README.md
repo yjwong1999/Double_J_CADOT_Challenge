@@ -12,7 +12,7 @@
 
 Basically, we achieve this `Tri-Axial Scaling` by:
 1. Scaling model size
-2. Scaling dataset size, or using balanced sampling
+2. Diffusion Augmentation & Balanced Data Sampling
 3. Test-Time Inference = Test-Time Augmentation + Ensemble Models
 
 Basically, we notice that:
