@@ -20,7 +20,8 @@ Basically, we notice that:
 4. A larger model tends to overfit when using a balanced data sampling strategy, but this can be mitigated by increasing the amount of data (hence, data scaling).
 
 <img src="assets/Segmentation_Guided_Diffusion.jpg" alt="Diffusion Augmentation" width="800"> </br>
-⬆️ Our diffusion augmentation piple that auto converts annotations into segmentation masks, and convert to image. (This figure is adopted from my proposed method from another competition. A more up to date figure will be updated here soon!)
+⬆️ Our diffusion augmentation piple that auto converts annotations into segmentation masks, and convert to image. </br>
+(This figure is adopted from my proposed method from another competition. A more up to date figure will be updated here soon!)
 
 <img src="assets/Dataset_Size_Scaling.png" alt="Dataset Size Scaling" width="800"> </br>
 ⬆️ Scaling Model Size vs Scaling Data Size vs Scaling Test-Time Inference
