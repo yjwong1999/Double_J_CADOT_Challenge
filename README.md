@@ -112,3 +112,10 @@ bash download_our_model.sh
 # Run the inference code
 python3 infer.py --tta all
 ```
+❗Note that:
+- Even when using the exact same dependencies (torch/numpy/ultralytics/etc), you might not obtain the same results.
+- This is because `different machines`, `different CUDA`, `different random seed` can also contribute to variations in results.
+- For instance, we tested training the exact `same model` and `same hyperparameter configurations` using the `same A100 GPU`, but on `Google Colab` and `Lightning AI`.
+- However, the `performance discrepancies` between the two models trained on `different platforms` were noticeable.
+- Hence, you might not be able to reproduce the exact same results.
+- Nevertheless, we believe our results on `tri-axial scaling` are valuable to the community 🤗
