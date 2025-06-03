@@ -70,11 +70,15 @@ pip install click==8.1.7
 python setup_data.py
 ```
 
-## Training Part 1 (without synthetic data)
+## Training (Hyperparameters discussion)
 
 ❗Note that due to time constraints, we did not train all possible experiments. Hence, in general, our hyperparameters are chosen based on:
 - If trained via balanced sampling, batch size = 8, image size = 960, epochs = `100 for smallest YOLO12n, 50 for YOLO12s, 30 for YOLO12x`
 - If trained without balanced sampling, batch size = 16, image size = 640, epochs = 100
+
+Actually, we should set all image sizes to 960, but we only considered this step at a later stage. Meanwhile, setting a higher image size increases GPU memory requirements, so we have to lower the batch size. As for epochs, we set them all to 100 for training without balanced sampling. If trained with balanced sampling, we found that larger models tend to overfit, so we have to reduce the number of epochs.
+
+## Training Part 1 (without synthetic data)
   
 ```bash
 # train ResNext101-YOLO12 naively without tricks
