@@ -22,7 +22,7 @@ Basically, we notice that:
 ![Dataset Size Scaling](assets/Dataset_Size_Scaling.png) </br>
 ⬆️ Scaling Model Size vs Scaling Data Size vs Scaling Test-Time Inference
 
-![Diffusion Augmentation](assets/Segmentation_Guided_Diffusion.jpg) </br>
+![Diffusion Augmentation]("assets/Segmentation Guided Diffusion.jpg") </br>
 ⬆️ Our diffusion augmentation piple that auto converts annotations into segmentation masks, and convert to image.
 
 
