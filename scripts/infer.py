@@ -65,16 +65,12 @@ def main():
     args = parser.parse_args()
 
     # --- Model Ensemble Setup ---
-    model_paths = [
-        '/content/new yj last.pt',
-        '/content/yolo12n.pt',
-        '/content/yolo12s.pt',
-        '/content/yolo12x aug bal.pt',
-        '/content/yolo12-resnext101.pt',
-    ]
+    model_dir = os.path.abspath("../models")
+    model_paths = [os.path.join(model_dir, f) for f in os.listdir(model_dir) if f.endswith(".pt")]
+
     models = [YOLO(path) for path in model_paths]
 
-    test_images_dir = '/content/cadot/CADOT_Dataset/test'
+    test_images_dir = '../data/test'
     category_names = [
         'small-object', 'basketball field', 'building', 'crosswalk',
         'football field', 'graveyard', 'large vehicle', 'medium vehicle',
@@ -85,7 +81,7 @@ def main():
     images, annotations = [], []
     annotation_id = 1
 
-    with open('images_ids.json', 'r') as f:
+    with open('../data/images_ids.json', 'r') as f:
         images_ids = json.load(f)
 
     for item in tqdm(images_ids["images"], desc="Processing images with Ensemble + TTA + WBF"):
