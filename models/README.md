@@ -13,4 +13,4 @@ In total, we used 5 models in our prediction:
 4. YOLO12x trained with balanced sampling and augmentation (synthetic data)
 5. YOLO12x trained with augmentation (synthetic data) only
 
-⚠️ Alternatively, you can manually search our models using the links listed in the bash script (in case the .sh file is not working in Windows machine).
+⚠️ Alternatively, you can manually search our models from [dropbox](https://www.dropbox.com/scl/fo/ftpub1vybquydapvhhfvw/APMPvKHcA-912DWvfR7f0XQ?rlkey=dn9vio38yni2ic3jmw7u2dss9&st=evkv5k0h&dl=0) (in case the .sh file is not working in Windows machine).
