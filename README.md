@@ -26,7 +26,7 @@ Basically, we notice that:
 ### 📋 Table of content
  1. [Step 1: Setup Repo](#step-1-setup-repo)
  2. [Step 2: Setup Dataset](#step-2-setup-dataset)
- 3. [Step 3 (shortcut): Download Our Trained Models](#step-3-training-hyperparameters-discussion)
+ 3. [Step 3 (shortcut): Download Our Trained Models](#step-3-shortcut-download-our-trained-models)
  4. [Step 3: Training](#step-3-training-hyperparameters-discussion)
  5. [Step 4: Inference](#step-4-inference)
 
