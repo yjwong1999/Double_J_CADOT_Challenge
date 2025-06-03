@@ -1,0 +1,9 @@
+## Our Trained Models
+
+For this CADOT challenge, we leverage ensemble modeling to stack and combine the predictions of multiple YOLO models into a final prediction. 
+
+Additionally, we apply test-time augmentation to enhance the detection performance of our final predictions. 
+
+By combining these two techniques, we implement a form of test-time scaling, which is the central theme of this project.
+
+Our trained models can be downloaded via scripts/download_our_model.sh. 
