@@ -66,9 +66,6 @@ pip install click==8.1.7
 ```bash
 # to convert the CADOT dataset from the default COCO format to YOLO annotation form
 python setup_data.py
-
-# setup our synthetic dataset
-python setup_synthetic_data.py
 ```
 
 ## Training Part 1 (without synthetic data)
@@ -85,6 +82,9 @@ python3 train_balanced.py --model-name "yolo12s.pt" --epoch 50 --batch 8 --imgsz
 
 ## Training Part 2 (with synthetic data)
 ```bash
+# setup our synthetic dataset
+python setup_synthetic_data.py
+
 # train yolo12x using balanced sampling and synthetic data
 python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgsz 960
 
