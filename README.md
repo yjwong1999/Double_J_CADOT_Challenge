@@ -23,7 +23,7 @@ Basically, we notice that:
 ⬆️ Scaling Model Size vs Scaling Data Size vs Scaling Test-Time Inference
 
 ![Diffusion Augmentation](assets/Segmentation_Guided_Diffusion.jpg) </br>
-⬆️ Our diffusion augmentation piple that auto converts annotations into segmentation masks, and convert to image.
+⬆️ Our diffusion augmentation piple that auto converts annotations into segmentation masks, and convert to image. (This figure is adopted from my proposed method from another competition. A more up to date figure will be updated here soon!)
 
 
 ### 📋 Table of content
