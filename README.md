@@ -6,7 +6,7 @@
 
 ## Instructions
 
-Please refer our Colab link to try out our code seamlessly!
+❗Please refer our Colab link to try out our code seamlessly!
 
 Conda environment
 ```bash
@@ -29,12 +29,20 @@ pip install torch==2.2.1 torchvision==0.17.1 torchaudio==2.2.1 --index-url https
 # Install Jupyter Notebook
 pip install jupyter notebook==7.1.0
 
+# install this version of ultralytics (for its dependencies)
+pip install ultralytics==8.3.111
+
+# uninstall default ultralytics and install my ultralytics that support Timm pretrained models
+pip uninstall ultralytics -y
+pip install git+https://github.com/DoubleY-BEGC2024/ultralytics-timm.git
+
+# install this to use wighted box fusion
+pip install ensemble-boxes
+
 # Remaining dependencies (for detection and etc)
-pip install ultralytics==8.1
 pip install pycocotools
 pip install requests==2.32.3
 pip install click==8.1.7
-pip install opendatasets==0.1.22
 ```
 
 ## Data structure
