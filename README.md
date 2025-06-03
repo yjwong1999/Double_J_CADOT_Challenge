@@ -25,7 +25,7 @@ Basically, we notice that:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/198dwtjhB3ETFRHRPLWNCi_bAr1g5213i?usp=sharing) 
 
-👆 Please refer our Colab link to try out our code seamlessly!
+👆 Please refer our Colab link to try out our code seamlessly! You might need `Colab Pro` to train the larger YOLO variants.
 
 Conda environment
 ```bash
