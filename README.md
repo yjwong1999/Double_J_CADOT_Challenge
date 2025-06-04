@@ -119,7 +119,7 @@ bash download_our_model.sh
 
 Actually, we should set all image sizes to 960, but we only considered this step at a later stage. Meanwhile, setting a higher image size increases GPU memory requirements, so we have to lower the batch size. As for epochs, we set them all to 100 for training without balanced sampling. If trained with balanced sampling, we found that larger models tend to overfit, so we have to reduce the number of epochs.
 
-### Training Part 1 (without synthetic data)
+### Training Part 1 (without synthetic data), all models will be used for ensemble model in inference
   
 ```bash
 # train ResNext101-YOLO12 naively without tricks
@@ -132,7 +132,7 @@ python3 train_balanced.py --model-name "yolo12n.pt" --epoch 100 --batch 8 --imgs
 python3 train_balanced.py --model-name "yolo12s.pt" --epoch 50 --batch 8 --imgsz 960
 ```
 
-### Training Part 2 (with synthetic data)
+### Training Part 2 (with synthetic data), all models will be used for ensemble model in inference
 ```bash
 # setup our synthetic dataset (generated via diffusion augmentation)
 python setup_synthetic_data.py
