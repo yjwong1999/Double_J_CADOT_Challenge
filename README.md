@@ -39,6 +39,9 @@ Smaller model benefits more from balanced sampling as opposed to larger models. 
 However, we see evidence of larger model (YOLO12s) to be better than smaller model (YOLO12n). </br>
 We hyphothesized that bigger dataset is required to unlock full potential of YOLO12x. </br>
 
+<img src="assets/Test_Time_Scaling.png" alt="Test Time Scaling" width="800"> </br>
+⬆️ Finally, we unleash the full potential of test-time scaling using ensemble model and TTA.
+
 [TODO](www.github.com) </br>
 
 
