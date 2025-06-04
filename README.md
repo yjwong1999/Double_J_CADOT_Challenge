@@ -144,12 +144,12 @@ python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 16 --img
 python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgsz 960
 ```
 
-### Move the trained models into `Double_J_CADOT_Challenge/models` directory
+### Move all 5 trained models into `Double_J_CADOT_Challenge/models` directory for ensemble model predictions
 ```bash
 python3 move_models.py
 ```
 
-## Step 4: Inference
+## Step 4: Inference (Ensemble model + Test Time Augmentation)
 ```bash
 # Run the inference code
 python3 infer.py --tta all
