@@ -29,8 +29,10 @@ To avoid overcomplicating this repo, we separate the code for diffusion augmenta
 <img src="assets/Dataset_Size_Scaling.png" alt="Dataset Size Scaling" width="800"> </br>
 ⬆️ Scaling Model Size vs Scaling Data Size vs Scaling Test-Time Inference
 
-[TODO](www.github.com) </br>
+<img src="assets/Dataset_Balanced_Sampling.png" alt="Dataset Balanced Sampling" width="800"> </br>
 ⬆️ Scaling Model Size vs Scaling Data Quality vs Sacling Test-Time Inference
+
+[TODO](www.github.com) </br>
 
 
 ### 📋 Table of content
