@@ -1,4 +1,7 @@
 ## TLDR
+
+❗Full Report Coming Soon!
+
 🤩 Our approach is simple, scale everything! We proposed a systematic `Tri-Axial Scaling` to approach Aerial Object Detection via:
 1. Model Size
 2. Dataset Size & Quality
