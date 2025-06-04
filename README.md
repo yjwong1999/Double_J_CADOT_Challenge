@@ -1,6 +1,6 @@
 # IEEE ICIP 2025: CADOT Challenge
 
-Tri-Axial Scaling in Aerial Object Detection: Model Size, Dataset Size, and Test-Time Inference in the CADOT Challenge
+### Tri-Axial Scaling in Aerial Object Detection: Model Size, Dataset Size, and Test-Time Inference in the CADOT Challenge
 
 #### By [Yi Jie WONG](https://yjwong1999.github.io/) & [Jing Jie TAN](https://jingjietan.com/) et al
 
