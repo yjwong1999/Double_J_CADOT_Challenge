@@ -153,7 +153,10 @@ python3 train_balanced.py --model-name "yolo12x.pt" --epoch 100 --batch 8 --imgs
 python3 move_models.py
 ```
 
-## Step 4: Inference (Ensemble model + Test Time Augmentation)
+## Step 4: Inference
+
+Ensemble model + Test Time Augmentation
+
 ```bash
 # Run the inference code
 python3 infer.py --tta all
