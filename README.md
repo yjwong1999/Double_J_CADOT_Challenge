@@ -40,7 +40,8 @@ However, we see evidence of larger model (YOLO12s) to be better than smaller mod
 We hyphothesized that bigger dataset is required to unlock full potential of YOLO12x. </br>
 
 <img src="assets/Test_Time_Scaling.png" alt="Test Time Scaling" width="800"> </br>
-⬆️ Finally, we unleash the full potential of test-time scaling using ensemble model and TTA.
+⬆️ Finally, we unleash the full potential of test-time scaling using ensemble model and TTA. </br>
+We apply Test Time Augmentation to all models in our ensemble to increase the detection rate. </br>
 
 [TODO](www.github.com) </br>
 
