@@ -20,17 +20,22 @@ Basically, we notice that:
 4. A larger model tends to overfit when using a balanced data sampling strategy, but this can be mitigated by increasing the amount of data (hence, data scaling).
 
 <img src="assets/Segmentation_Guided_Diffusion.jpg" alt="Diffusion Augmentation" width="800"> </br>
-⬆️ Our diffusion augmentation piple that auto converts annotations into segmentation masks, and convert to image. </br>
+⬆️ Our diffusion augmentation pipeline converts annotations into synthetic image. </br>
 This figure is adopted from my proposed method from another competition. </br>
-In this challenge, I modified the pipeline to support bbox -> segmentation mask -> image generation. </br>
+I modified the pipeline to support bbox -> segmentation mask -> image generation. </br>
 A more up to date figure will be updated here soon! </br>
 To avoid overcomplicating this repo, we separate the code for diffusion augmentation in a separate [repo](https://github.com/yjwong1999/LOTR).
 
 <img src="assets/Dataset_Size_Scaling.png" alt="Dataset Size Scaling" width="800"> </br>
 ⬆️ Scaling Model Size vs Scaling Data Size vs Scaling Test-Time Inference
+Larger model is more effective in learning from imbalanced dataset.
+Larger model also benefits from data size scaling even in the presence of imbalanced class.
 
 <img src="assets/Dataset_Balanced_Sampling.png" alt="Dataset Balanced Sampling" width="800"> </br>
 ⬆️ Scaling Model Size vs Scaling Data Quality vs Sacling Test-Time Inference
+Smaller model benefits more from balanced sampling as opposed to larger models.
+However, we see evidence of larger model (YOLO12s) to be better than smaller model (YOLO12n).
+We hyphothesized that bigger dataset is required to unlock full potential of YOLO12x.
 
 [TODO](www.github.com) </br>
 
