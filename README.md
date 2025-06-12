@@ -33,7 +33,7 @@ To avoid overcomplicating this repo, we separate the code for diffusion augmenta
 Larger model is more effective in learning from imbalanced dataset. </br>
 Larger model also benefits from data size scaling even in the presence of imbalanced class. </br>
 
-<img src="assets/Dataset_Balanced_Sampling.png" alt="Dataset Balanced Sampling" width="800"> </br>
+<img src="assets/Dataset_Balanced_Sampling.jpg" alt="Dataset Balanced Sampling" width="800"> </br>
 ⬆️ Scaling Model Size vs Scaling Data Quality vs Sacling Test-Time Inference </br>
 Smaller model benefits more from balanced sampling as opposed to larger models. </br>
 However, we see evidence of larger model (YOLO12s) to be better than smaller model (YOLO12n). </br>
