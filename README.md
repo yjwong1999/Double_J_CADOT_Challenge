@@ -2,7 +2,7 @@
 
 ### Tri-Axial Scaling in Aerial Object Detection: Model Size, Dataset Size and Quality, and Test-Time Inference in the CADOT Challenge
 
-#### By Double J (Jie): [Yi Jie WONG](https://yjwong1999.github.io/) & [Jing Jie TAN](https://jingjietan.com/) et al
+#### By Team Double J (Jie): [Yi Jie WONG](https://yjwong1999.github.io/) & [Jing Jie TAN](https://jingjietan.com/) et al
 
 ## TLDR
 🤩 Our approach is simple, scale everything! We proposed a systematic `Tri-Axial Scaling` to approach Aerial Object Detection via:
