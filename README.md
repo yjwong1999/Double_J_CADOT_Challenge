@@ -175,7 +175,7 @@ We would like to express our gratitude to the CADOT organizers for hosting this 
 
 ## Citate our Work
 
-Our paper has been invited by IEEE ICIP 2025! Please cite our paper if this repo helps your research. The preprint is available soon!
+Our solution has been invited to IEEE ICIP 2025! Please cite our paper if this repo helps your research. The preprint is available soon!
 
 ```
 @InProceedings{Wong2024,
