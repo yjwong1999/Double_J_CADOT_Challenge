@@ -175,7 +175,7 @@ We would like to express our gratitude to the CADOT organizers for hosting this 
 
 ## Citate our Work
 
-Our solution has been invited to IEEE ICIP 2025! Please cite our paper if this repo helps your research. The preprint is available [here]("report/Tri-Axial Scaling In Aerial Object Detection Model Size, Dataset Size and Quality, and Test-Time Inference In the Cadot Challenge.pdf").
+Our solution has been invited to IEEE ICIP 2025! Please cite our paper if this repo helps your research. The preprint is available [here](https://github.com/yjwong1999/Double_J_CADOT_Challenge/blob/62df466d9ccf2ccdd39ef44a34f34ff62b387fca/report/Tri-Axial%20Scaling%20In%20Aerial%20Object%20Detection%20Model%20Size%2C%20Dataset%20Size%20and%20Quality%2C%20and%20Test-Time%20Inference%20In%20the%20Cadot%20Challenge.pdf).
 
 ```
 @InProceedings{Wong2024,
