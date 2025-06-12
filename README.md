@@ -43,7 +43,7 @@ We hyphothesized that bigger dataset is required to unlock full potential of YOL
 ⬆️ Finally, we unleash the full potential of test-time scaling using ensemble model and TTA. </br>
 We apply Test Time Augmentation to all models in our ensemble to increase the detection rate. </br>
 
-[TODO](www.github.com) </br>
+Detailed elaboration on our solution can be found in our [preprint](https://github.com/yjwong1999/Double_J_CADOT_Challenge/blob/62df466d9ccf2ccdd39ef44a34f34ff62b387fca/report/Tri-Axial%20Scaling%20In%20Aerial%20Object%20Detection%20Model%20Size%2C%20Dataset%20Size%20and%20Quality%2C%20and%20Test-Time%20Inference%20In%20the%20Cadot%20Challenge.pdf).
 
 
 ### 📋 Table of content
