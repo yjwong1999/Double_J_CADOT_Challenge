@@ -175,4 +175,12 @@ We would like to express our gratitude to the CADOT organizers for hosting this 
 
 ## Citate our Work
 
-[Report Coming Soon!]
+Our paper has been invited by IEEE ICIP 2025! Please cite our paper if this repo helps your research. The preprint is available soon!
+
+```
+@InProceedings{Wong2024,
+title = {Tri-Axial Scaling in Aerial Object Detection: Model Size, Dataset Size and Quality, and Test-Time Inference in the CADOT Challenge},
+author = {Yi Jie Wong and Jing Jie Tan and Mau-Luen Tham and Ban-Hoe Kwan and Yan Chai Hum},
+booktitle={2025 IEEE International Conference on Image Processing (ICIP)},
+year={2025}}
+```
