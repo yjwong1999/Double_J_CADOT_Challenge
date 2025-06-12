@@ -5,7 +5,7 @@
 #### By Team Double J (Jie): [Yi Jie WONG](https://yjwong1999.github.io/) & [Jing Jie TAN](https://jingjietan.com/) et al
 
 ## TLDR
-🤩 Our approach is simple, scale everything! We proposed a systematic `Tri-Axial Scaling` to approach Aerial Object Detection via:
+Our team ranked 1st globally in the IEEE Big Data Cup 2024 - BEGC2024 challenge! 🏅🎉🥳 Our approach is simple, scale everything! We proposed a systematic `Tri-Axial Scaling` to approach Aerial Object Detection via:
 1. Model Size
 2. Dataset Size & Quality
 3. Test-Time Inference
